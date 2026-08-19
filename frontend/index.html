@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">SkillBridge <span>AI</span></div>
+    <div class="tag">Skill Gap → Industry Match</div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">AI-POWERED CAREER READINESS</p>
+        <h1>Bridge your skills to the skills industry needs.</h1>
+        <p class="subtitle">Enter your current skills, choose a target role, and instantly see your skill gap and job-readiness.</p>
+      </div>
+      <div class="hero-card">
+        <div class="score" id="heroScore">—</div>
+        <div>Current match</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel">
+        <h2>Student Profile</h2>
+        <label>Name</label>
+        <input id="studentName" placeholder="e.g. Rahul">
+
+        <label>Education</label>
+        <input id="education" placeholder="e.g. B.Tech CSE">
+
+        <label>Your skills</label>
+        <textarea id="skills" placeholder="Python, HTML, CSS, JavaScript, MySQL"></textarea>
+
+        <label>Target role</label>
+        <select id="role">
+          <option>Frontend Developer</option>
+          <option>Full Stack Developer</option>
+          <option>Python Developer</option>
+          <option>Data Analyst</option>
+        </select>
+
+        <button id="analyzeBtn">Analyze Skill Gap</button>
+      </div>
+
+      <div class="panel results">
+        <div class="result-head">
+          <div>
+            <p class="eyebrow">ANALYSIS</p>
+            <h2 id="resultTitle">Ready to analyze</h2>
+          </div>
+          <div class="big-score" id="score">—</div>
+        </div>
+
+        <div class="bar"><div id="progress"></div></div>
+
+        <div class="stat-grid">
+          <div class="stat"><strong id="matchedCount">0</strong><span>Matched skills</span></div>
+          <div class="stat"><strong id="missingCount">0</strong><span>Skill gaps</span></div>
+          <div class="stat"><strong id="jobCount">0</strong><span>Job matches</span></div>
+        </div>
+
+        <h3>Matched Skills</h3>
+        <div id="matchedSkills" class="chips"></div>
+
+        <h3>Missing Skills</h3>
+        <div id="missingSkills" class="chips"></div>
+
+        <h3>Recommended Next Skills</h3>
+        <div id="recommendations" class="recommendations"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>SkillBridge AI • College Project Prototype</footer>
+  <script src="app.js"></script>
+</body>
+</html>
